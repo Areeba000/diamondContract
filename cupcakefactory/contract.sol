@@ -55,11 +55,12 @@ contract cupcake {
     }
     
     //owner can transfer cupcake free to anyone address
-     function transfercupcake( CupcakeType _type,address to, uint256 amount) public onlyowner  Notenoughcupcakes( amount){
+     function transfercupcake( address to, uint256 amount) public onlyowner  Notenoughcupcakes( amount){
          cupcakedata storage s = getcupcakeStorage() ;
-         if (!s.allowedAddresses[msg.sender]) {
-        require(amount >= amount * s.cupcakePrices[_type], "You must pay the correct amount per cupcake");
-    }
+          s.cupcakeBalances[to] = amount;
+          s.cupcakeBalances[address(this)] -= amount;
+       
+     }
      //owner can allow address 
      function allowaddress(address _add)public onlyowner{
          cupcakedata storage s = getcupcakeStorage() ;
