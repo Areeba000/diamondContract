@@ -33,4 +33,5 @@ Here's an example of how to interact with the "MedicalRecords" contract:
 
 4. Healthcare providers can view medical records (if access is granted):
 
+![Screenshot 2023-10-24 165243](https://github.com/Areeba000/diamondContract/assets/140241495/88826339-9579-48c2-9f44-38164aa53ff0)
 
