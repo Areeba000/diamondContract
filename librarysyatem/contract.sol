@@ -38,7 +38,7 @@ contract LibrarySystem { bytes32 internal constant LIBRARYNAMESPACE = keccak256(
         _;
     }
 
-    function addBook(string memory title, string memory author) public {
+    function addBook(string memory title, string memory author) public onlywarden {
         librarydata storage s = libraryStorage();
         bookCount++;
         s.books[bookCount] = Book({
