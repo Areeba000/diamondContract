@@ -27,7 +27,7 @@ contract MedicalRecords {
     }
 
     // Function to initialize the contract by the data owner (patient)
-    function initializecupcake() public {
+    function initializehealthcare() public {
         healthcaredata storage s = gethealthcareStorage();
         s.dataowner = msg.sender;
         s.initialized = true;
